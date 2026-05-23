@@ -1,5 +1,7 @@
 # Intelligent Talent Matching Platform
 
+[![CI](https://github.com/alyanbabar/Intelligent-Talnet-Matching-System/actions/workflows/ci.yml/badge.svg)](https://github.com/alyanbabar/Intelligent-Talnet-Matching-System/actions/workflows/ci.yml)
+
 **CSIT314 — Systems Development Methodologies**  
 University of Wollongong · Session 1, 2026
 
