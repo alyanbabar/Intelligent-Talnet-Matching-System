@@ -23,10 +23,10 @@ An intelligent talent matching platform that connects **candidates** and **emplo
 
 | Name | Contribution | Student ID |
 |------|----------------|------------|
-| **Saad** | Backend — Flask REST API, routes, services (matching, search, payment), authentication, seed data | _[ID]_ |
-| **Ernest Teh** | Database — PostgreSQL / Supabase schema (`schema.sql`), data model, migrations and DB integration | _[ID]_ |
-| **Alyan Alam** | Frontend — React UI (Vite), pages, API integration, membership upgrade flow | _[ID]_ |
-| _[Other members]_ | _[Role]_ | _[ID]_ |
+| **Saad** | Backend — Flask REST API, routes, services (matching, search, payment), authentication, seed data | _[8158411]_ |
+| **Ernest Teh** | Database — PostgreSQL / Supabase schema (`schema.sql`), data model, migrations and DB integration | _[8359118]_ |
+| **Alyan Alam** | Frontend — React UI (Vite), pages, API integration, membership upgrade flow | _[8070799]_ |
+| _[Sujal, Adel]_ | _[-]_ | _[-]_ |
 
 ### Repository layout by contributor
 
