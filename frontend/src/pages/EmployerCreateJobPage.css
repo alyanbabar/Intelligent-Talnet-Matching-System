@@ -1,0 +1,187 @@
+/*
+ * EmployerCreateJobPage.css → EmployerCreateJobPage.jsx
+ * Shares the employer shell (.employer-page / .employer-sidebar) with the dashboard.
+ * Prefix: ecj- for create-job–only blocks.
+ */
+
+.employer-create-job-page .ecj-main {
+  max-width: 720px;
+}
+
+/* --- Title --- */
+.ecj-header {
+  margin-bottom: 24px;
+}
+
+.ecj-header h1 {
+  margin: 0 0 8px;
+  font: 700 28px/1.2 Manrope, sans-serif;
+  color: var(--emp-heading);
+}
+
+.ecj-header p {
+  margin: 0;
+  font: 400 16px/1.5 'DM Sans', sans-serif;
+  color: var(--emp-body);
+}
+
+/* --- Form card (Figma: 16px radius, 1px border) --- */
+.ecj-card {
+  background: var(--emp-white);
+  border: 1px solid var(--emp-border);
+  border-radius: 16px;
+  padding: 28px 32px 32px;
+}
+
+.ecj-form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ecj-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.ecj-field span:first-of-type,
+.ecj-fieldset legend {
+  font: 500 14px/1.3 'DM Sans', sans-serif;
+  color: var(--emp-heading);
+}
+
+.ecj-field input,
+.ecj-field select,
+.ecj-field textarea {
+  border: 1px solid var(--emp-border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font: 400 15px/1.45 'DM Sans', sans-serif;
+  color: var(--emp-heading);
+  font-family: inherit;
+}
+
+.ecj-field input:disabled {
+  background: #F1F5F9;
+  color: var(--emp-body);
+}
+
+.ecj-field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.ecj-hint {
+  font: 400 13px/1.4 'DM Sans', sans-serif;
+  color: var(--emp-body);
+}
+
+.ecj-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .ecj-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Work mode radios --- */
+.ecj-fieldset {
+  border: 0;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.ecj-fieldset legend {
+  margin-bottom: 10px;
+}
+
+.ecj-radios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.ecj-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: 400 15px/1 'DM Sans', sans-serif;
+  color: var(--emp-heading);
+  cursor: pointer;
+}
+
+.ecj-radio input {
+  accent-color: var(--emp-primary);
+  width: 16px;
+  height: 16px;
+}
+
+.ecj-error {
+  margin: 0 0 8px;
+  font: 500 14px/1.4 'DM Sans', sans-serif;
+  color: #B91C1C;
+}
+
+.ecj-status {
+  margin: 0 0 8px;
+  font: 500 14px/1.4 'DM Sans', sans-serif;
+  color: var(--emp-primary);
+}
+
+/* --- Publish / Draft / Cancel row --- */
+.ecj-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding-top: 20px;
+  margin-top: 8px;
+  border-top: 1px solid var(--emp-border);
+}
+
+.ecj-btn-primary {
+  height: 48px;
+  padding: 0 24px;
+  border-radius: 12px;
+  border: 0;
+  background: var(--emp-primary);
+  color: #fff;
+  font: 600 15px/1 'DM Sans', sans-serif;
+  cursor: pointer;
+}
+
+.ecj-btn-secondary {
+  height: 48px;
+  padding: 0 24px;
+  border-radius: 12px;
+  border: 1px solid var(--emp-border);
+  background: var(--emp-white);
+  color: var(--emp-heading);
+  font: 600 15px/1 'DM Sans', sans-serif;
+  cursor: pointer;
+}
+
+.ecj-btn-link {
+  border: 0;
+  background: transparent;
+  padding: 8px 12px;
+  font: 400 15px/1 'DM Sans', sans-serif;
+  color: var(--emp-body);
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: auto;
+}
+
+@media (max-width: 560px) {
+  .ecj-btn-link {
+    margin-left: 0;
+    width: 100%;
+    text-align: left;
+  }
+}

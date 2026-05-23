@@ -1,0 +1,36 @@
+// Dummy listings shared by dashboard + job search + job details fallback.
+export const SAMPLE_JOBS = [
+  {
+    id: 'job-1',
+    title: 'Senior Frontend Developer',
+    company: 'TechNova Labs',
+    location: 'Sydney, AU',
+    type: 'Full-time',
+    salary: '$140k – $165k',
+    posted: '2 days ago',
+    tags: ['React', 'TypeScript', 'CSS'],
+    match: 96,
+  },
+  {
+    id: 'job-2',
+    title: 'Product Designer',
+    company: 'Bright UX Studio',
+    location: 'Remote',
+    type: 'Contract',
+    salary: '$90k – $110k',
+    posted: '5 days ago',
+    tags: ['Figma', 'UI', 'Research'],
+    match: 88,
+  },
+  {
+    id: 'job-3',
+    title: 'Backend Engineer',
+    company: 'CloudScale Inc',
+    location: 'Melbourne, AU',
+    type: 'Full-time',
+    salary: '$130k – $150k',
+    posted: '1 week ago',
+    tags: ['Node.js', 'PostgreSQL', 'AWS'],
+    match: 82,
+  },
+]

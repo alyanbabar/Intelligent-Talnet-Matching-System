@@ -1,0 +1,160 @@
+/*
+ * SignupPage.css → SignupPage.jsx (candidate vs employer role pick)
+ * Prefix: signup- / role-
+ */
+
+.signup-page {
+  min-height: 100vh;
+  background: var(--signup-bg);
+  font-family: var(--signup-body-font);
+}
+
+.signup-wrap {
+  width: min(960px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* --- Top bar + brand --- */
+.signup-nav {
+  background: var(--signup-surface);
+  border-bottom: 1px solid var(--signup-border);
+  padding: 20px 0 1px;
+}
+
+.signup-brand {
+  border: 0;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.signup-brand-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 12px;
+  background: var(--signup-primary);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font: 700 18px/1 var(--signup-heading-font);
+}
+
+.signup-brand-name {
+  color: var(--signup-heading);
+  font: 700 20px/1 var(--signup-heading-font);
+}
+
+/* --- Main column --- */
+.signup-main {
+  padding: 48px 0 72px;
+}
+
+/* --- Title block --- */
+.signup-heading {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.signup-heading h1 {
+  margin: 0 0 10px;
+  color: var(--signup-heading);
+  font: 700 30px/1.2 var(--signup-heading-font);
+}
+
+.signup-heading p {
+  margin: 0;
+  color: var(--signup-body);
+  font: 400 16px/1.5 var(--signup-body-font);
+}
+
+/* --- Role cards --- */
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.role-card {
+  background: var(--signup-surface);
+  border: 1px solid var(--signup-border);
+  border-radius: 16px;
+  padding: 4px;
+}
+
+.role-card.is-selected {
+  border-color: var(--signup-primary);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.role-card-inner {
+  padding: 24px;
+}
+
+.role-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--signup-icon-bg);
+  color: var(--signup-primary);
+  display: grid;
+  place-items: center;
+  font: 700 16px/1 var(--signup-heading-font);
+  margin-bottom: 14px;
+}
+
+.role-card-inner h2 {
+  margin: 0 0 10px;
+  color: var(--signup-heading);
+  font: 700 20px/1.3 var(--signup-heading-font);
+}
+
+.role-card-inner p {
+  margin: 0 0 18px;
+  color: var(--signup-body);
+  font: 400 15px/1.5 var(--signup-body-font);
+}
+
+.role-card-inner button {
+  width: 100%;
+  height: 46px;
+  border-radius: 12px;
+  border: 0;
+  background: var(--signup-primary);
+  color: #fff;
+  font: 600 15px/1 var(--signup-body-font);
+  cursor: pointer;
+}
+
+/* --- Already have account --- */
+.signup-login-line {
+  margin: 28px 0 0;
+  text-align: center;
+  color: var(--signup-body);
+  font: 400 15px/1.5 var(--signup-body-font);
+}
+
+.signup-login-line button {
+  border: 0;
+  background: transparent;
+  color: var(--signup-primary);
+  font: 600 15px/1 var(--signup-body-font);
+  cursor: pointer;
+  padding: 0;
+}
+
+.signup-feedback {
+  margin: 12px 0 0;
+  text-align: center;
+  color: var(--signup-primary);
+  font: 400 14px/1.4 var(--signup-body-font);
+}
+
+/* --- Breakpoints --- */
+@media (max-width: 768px) {
+  .role-grid {
+    grid-template-columns: 1fr;
+  }
+}

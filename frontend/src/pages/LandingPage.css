@@ -1,0 +1,264 @@
+/*
+ * LandingPage.css → LandingPage.jsx (home / marketing)
+ * Theme vars (--page-bg, etc.) are set inline on the root div in the component.
+ *
+ * Sections: page shell · top nav · hero · how it works · footer · breakpoints
+ */
+
+/* --- Page shell --- */
+.talentmatch-page {
+  background: var(--page-bg);
+  color: var(--text-body);
+  font-family: var(--body-font);
+  min-height: 100vh;
+}
+
+.content-wrap {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* --- Top nav --- */
+.top-nav {
+  border-bottom: 1px solid var(--border-color);
+  background: var(--page-bg);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.brand-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: var(--primary-color);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font: 700 18px/1 var(--heading-font);
+}
+
+.brand-name {
+  font: 700 20px/1 var(--heading-font);
+  color: var(--text-heading);
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  border: 0;
+  background: transparent;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font: 500 15px/1 var(--body-font);
+  color: var(--text-body);
+}
+
+.nav-link-text:hover {
+  color: var(--text-heading);
+}
+
+.nav-link-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.nav-link.is-active {
+  color: var(--primary-color);
+}
+
+/* --- Hero --- */
+.hero-section {
+  background: var(--hero-gradient);
+  padding: 72px 0 88px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-copy h1 {
+  margin: 0 0 16px;
+  font: 700 44px/1.15 var(--heading-font);
+  color: var(--text-heading);
+}
+
+.hero-copy p {
+  margin: 0 0 28px;
+  font: 400 17px/1.6 var(--body-font);
+  max-width: 520px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  height: 48px;
+  padding: 0 24px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font: 600 16px/1 var(--body-font);
+}
+
+.action-btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.action-btn-outline {
+  background: #fff;
+  color: var(--primary-dark-text);
+  border-color: var(--border-color);
+}
+
+.hero-visual-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  border: 1px solid var(--border-color);
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.08);
+}
+
+.ai-badge {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 16px;
+  border-radius: 16px;
+  background: var(--icon-bg);
+  color: var(--primary-color);
+  display: grid;
+  place-items: center;
+  font: 700 18px/1 var(--heading-font);
+}
+
+.hero-visual-card p {
+  margin: 0;
+  font: 600 16px/1.4 var(--body-font);
+  color: var(--text-heading);
+}
+
+/* --- How it works --- */
+.how-section {
+  padding: 72px 0 96px;
+  background: var(--section-alt-bg);
+}
+
+.how-section h2 {
+  margin: 0 0 40px;
+  text-align: center;
+  font: 700 32px/1.2 var(--heading-font);
+  color: var(--text-heading);
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.info-card {
+  background: var(--page-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--icon-bg);
+  color: var(--primary-color);
+  display: grid;
+  place-items: center;
+  font: 700 14px/1 var(--heading-font);
+  margin-bottom: 16px;
+}
+
+.info-card h3 {
+  margin: 0 0 16px;
+  font: 700 20px/1.3 var(--heading-font);
+  color: var(--text-heading);
+}
+
+.info-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.info-card li {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+  font: 400 15px/1.5 var(--body-font);
+  color: var(--text-body);
+}
+
+.bullet-check {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+/* --- Footer --- */
+.page-footer {
+  border-top: 1px solid var(--border-color);
+  padding: 24px 0 40px;
+  background: var(--page-bg);
+}
+
+.footer-inner p {
+  margin: 0;
+  text-align: center;
+  font: 400 14px/1.5 var(--body-font);
+  color: var(--text-body);
+}
+
+.action-feedback {
+  margin-top: 12px;
+  text-align: center;
+  font: 400 13px/1.4 var(--body-font);
+  color: var(--primary-color);
+}
+
+/* --- Breakpoints --- */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy h1 {
+    font-size: 34px;
+  }
+}

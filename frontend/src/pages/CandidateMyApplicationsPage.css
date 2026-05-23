@@ -1,0 +1,202 @@
+/*
+ * CandidateMyApplicationsPage.css → CandidateMyApplicationsPage.jsx
+ * Prefix: ma-
+ */
+
+.ma-page {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+  background: var(--ma-bg);
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* --- Sidebar --- */
+.ma-sidebar {
+  background: var(--ma-surface);
+  border-right: 1px solid var(--ma-border);
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ma-brand {
+  border: 0;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font: 700 17px/1 Manrope, sans-serif;
+  color: var(--ma-heading);
+  padding: 8px 8px 16px;
+}
+
+.ma-brand-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: var(--ma-primary);
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+
+.ma-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.ma-nav-item {
+  border: 0;
+  background: transparent;
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font: 500 15px/1 'DM Sans', sans-serif;
+  color: var(--ma-body);
+}
+
+.ma-nav-item:hover {
+  background: rgba(37, 99, 235, 0.06);
+}
+
+.ma-nav-item.active {
+  background: rgba(37, 99, 235, 0.12);
+  color: var(--ma-primary);
+  font-weight: 600;
+}
+
+.ma-logout {
+  margin-top: auto;
+}
+
+/* --- Page title + application list --- */
+.ma-main {
+  padding: 28px 32px 48px;
+  max-width: 880px;
+}
+
+.ma-header h1 {
+  margin: 0 0 6px;
+  font: 700 26px/1.2 Manrope, sans-serif;
+  color: var(--ma-heading);
+}
+
+.ma-header p {
+  margin: 0 0 22px;
+  color: var(--ma-body);
+  font: 400 15px/1.5 'DM Sans', sans-serif;
+}
+
+/* --- Rows (or empty state) --- */
+.ma-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ma-empty {
+  margin: 0;
+  padding: 24px;
+  background: var(--ma-surface);
+  border: 1px dashed var(--ma-border);
+  border-radius: 14px;
+  color: var(--ma-body);
+  font: 400 15px/1.55 'DM Sans', sans-serif;
+}
+
+/* --- Single application row --- */
+.ma-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  background: var(--ma-surface);
+  border: 1px solid var(--ma-border);
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+
+.ma-row h2 {
+  margin: 0 0 6px;
+  font: 700 17px/1.3 Manrope, sans-serif;
+  color: var(--ma-heading);
+}
+
+.ma-company,
+.ma-date {
+  margin: 0 0 4px;
+  font: 400 14px/1.5 'DM Sans', sans-serif;
+  color: var(--ma-body);
+}
+
+.ma-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.ma-status {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font: 600 13px/1 'DM Sans', sans-serif;
+}
+
+.ma-status-applied {
+  background: #EFF6FF;
+  color: var(--ma-primary);
+}
+
+.ma-status-interview {
+  background: #FFF7ED;
+  color: #C2410C;
+}
+
+.ma-status-rejected {
+  background: #FEE2E2;
+  color: #B91C1C;
+}
+
+.ma-right button {
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid var(--ma-border);
+  background: #fff;
+  cursor: pointer;
+  font: 600 14px/1 'DM Sans', sans-serif;
+}
+
+.ma-feedback {
+  margin-top: 14px;
+  color: var(--ma-primary);
+  font: 400 14px/1 'DM Sans', sans-serif;
+}
+
+/* --- Breakpoints --- */
+@media (max-width: 900px) {
+  .ma-page {
+    grid-template-columns: 1fr;
+  }
+
+  .ma-sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-right: 0;
+    border-bottom: 1px solid var(--ma-border);
+  }
+
+  .ma-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .ma-logout {
+    margin-top: 0;
+  }
+}

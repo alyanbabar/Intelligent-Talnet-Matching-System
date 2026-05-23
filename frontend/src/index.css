@@ -1,0 +1,23 @@
+/*
+ * index.css → global (imported from main.jsx)
+ * Baseline resets for the whole app. Page-specific stuff lives in pages/*.css.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+}

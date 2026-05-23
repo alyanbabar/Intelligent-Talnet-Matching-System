@@ -1,0 +1,254 @@
+/*
+ * CandidateJobSearchPage.css → CandidateJobSearchPage.jsx
+ * Prefix: job-search-page (root), js- (everything else)
+ */
+
+.job-search-page {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+  background: var(--js-bg);
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* --- Sidebar --- */
+.js-sidebar {
+  background: var(--js-surface);
+  border-right: 1px solid var(--js-border);
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.js-brand {
+  border: 0;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font: 700 17px/1 Manrope, sans-serif;
+  color: var(--js-heading);
+  padding: 8px 8px 16px;
+}
+
+.js-brand-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: var(--js-primary);
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+
+.js-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.js-nav-item {
+  border: 0;
+  background: transparent;
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font: 500 15px/1 'DM Sans', sans-serif;
+  color: var(--js-body);
+}
+
+.js-nav-item:hover {
+  background: rgba(37, 99, 235, 0.06);
+}
+
+.js-nav-item.active {
+  background: rgba(37, 99, 235, 0.12);
+  color: var(--js-primary);
+  font-weight: 600;
+}
+
+.js-logout {
+  margin-top: auto;
+}
+
+/* --- Main: header, filters, results --- */
+.js-main {
+  padding: 28px 32px 48px;
+  max-width: 960px;
+}
+
+.js-header h1 {
+  margin: 0 0 6px;
+  font: 700 26px/1.2 Manrope, sans-serif;
+  color: var(--js-heading);
+}
+
+.js-header p {
+  margin: 0 0 22px;
+  color: var(--js-body);
+  font: 400 15px/1.5 'DM Sans', sans-serif;
+}
+
+/* --- Filter row + search --- */
+.js-filters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(160px, 1fr)) minmax(240px, 2fr);
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.js-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.js-filter span {
+  font: 500 13px/1 'DM Sans', sans-serif;
+  color: var(--js-heading);
+}
+
+.js-filter select {
+  height: 42px;
+  border: 1px solid var(--js-border);
+  border-radius: 10px;
+  padding: 0 10px;
+  font: 400 14px/1 'DM Sans', sans-serif;
+}
+
+.js-search {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.js-search input {
+  flex: 1;
+  height: 42px;
+  border: 1px solid var(--js-border);
+  border-radius: 10px;
+  padding: 0 12px;
+}
+
+.js-search button {
+  height: 42px;
+  padding: 0 16px;
+  border-radius: 10px;
+  border: 0;
+  background: var(--js-primary);
+  color: #fff;
+  font: 600 14px/1 'DM Sans', sans-serif;
+  cursor: pointer;
+}
+
+/* --- Job cards --- */
+.js-results {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.js-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  background: var(--js-surface);
+  border: 1px solid var(--js-border);
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+
+.js-card h2 {
+  margin: 0 0 6px;
+  font: 700 17px/1.3 Manrope, sans-serif;
+  color: var(--js-heading);
+}
+
+.js-meta,
+.js-salary {
+  margin: 0 0 4px;
+  font: 400 14px/1.5 'DM Sans', sans-serif;
+  color: var(--js-body);
+}
+
+.js-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.js-tag {
+  background: #EFF6FF;
+  color: var(--js-primary);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font: 500 12px/1 'DM Sans', sans-serif;
+}
+
+.js-card-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.js-match {
+  background: #DCFCE7;
+  color: #008236;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font: 600 13px/1 'DM Sans', sans-serif;
+}
+
+.js-card-actions button {
+  height: 38px;
+  padding: 0 16px;
+  border-radius: 10px;
+  border: 1px solid var(--js-border);
+  background: #fff;
+  cursor: pointer;
+  font: 600 14px/1 'DM Sans', sans-serif;
+}
+
+.js-empty {
+  color: var(--js-body);
+  font: 400 15px/1.5 'DM Sans', sans-serif;
+}
+
+.js-feedback {
+  margin-top: 14px;
+  color: var(--js-primary);
+  font: 400 14px/1 'DM Sans', sans-serif;
+}
+
+/* --- Breakpoints --- */
+@media (max-width: 900px) {
+  .job-search-page {
+    grid-template-columns: 1fr;
+  }
+
+  .js-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .js-sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-right: 0;
+    border-bottom: 1px solid var(--js-border);
+  }
+
+  .js-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .js-logout {
+    margin-top: 0;
+  }
+}

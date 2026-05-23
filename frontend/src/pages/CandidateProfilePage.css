@@ -1,0 +1,234 @@
+/*
+ * CandidateProfilePage.css → CandidateProfilePage.jsx (onboarding form)
+ * Prefix: cp-
+ */
+
+.candidate-profile-page {
+  min-height: 100vh;
+  background: var(--cp-bg);
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* --- Layout width --- */
+.cp-wrap {
+  width: min(900px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* --- Top bar --- */
+.cp-header {
+  background: var(--cp-surface);
+  border-bottom: 1px solid var(--cp-border);
+  padding: 20px 0;
+}
+
+.cp-brand {
+  border: 0;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font: 700 18px/1 Manrope, sans-serif;
+  color: var(--cp-heading);
+  padding: 0;
+}
+
+.cp-brand-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: var(--cp-primary);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+}
+
+/* --- Main + card --- */
+.cp-main {
+  padding: 40px 0 64px;
+}
+
+.cp-card {
+  background: var(--cp-surface);
+  border: 1px solid var(--cp-border);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.cp-card h1 {
+  margin: 0 0 8px;
+  text-align: center;
+  font: 700 28px/1.2 Manrope, sans-serif;
+  color: var(--cp-heading);
+}
+
+.cp-sub {
+  margin: 0 0 28px;
+  text-align: center;
+  color: var(--cp-body);
+  font: 400 15px/1.5 'DM Sans', sans-serif;
+}
+
+/* --- Form rows (two columns on wide screens) --- */
+.cp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.cp-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.cp-field span {
+  font: 500 14px/1.4 'DM Sans', sans-serif;
+  color: var(--cp-heading);
+}
+
+.cp-field input {
+  height: 44px;
+  border: 1px solid var(--cp-border);
+  border-radius: 10px;
+  padding: 0 12px;
+  font: 400 15px/1 'DM Sans', sans-serif;
+}
+
+/* --- Section headings + radios --- */
+.cp-section-title {
+  margin: 24px 0 12px;
+  font: 700 18px/1.3 Manrope, sans-serif;
+  color: var(--cp-heading);
+}
+
+.cp-radio-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.cp-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: 400 15px/1 'DM Sans', sans-serif;
+  color: var(--cp-heading);
+}
+
+.cp-radio input {
+  accent-color: var(--cp-primary);
+}
+
+/* --- Resume drop zone --- */
+.cp-drop {
+  border: 2px dashed var(--cp-border);
+  border-radius: 12px;
+  padding: 28px;
+  text-align: center;
+  cursor: pointer;
+  color: var(--cp-body);
+  font: 400 14px/1.5 'DM Sans', sans-serif;
+  margin-bottom: 8px;
+}
+
+.cp-drop.is-active {
+  border-color: var(--cp-primary);
+  background: rgba(37, 99, 235, 0.06);
+}
+
+/* --- Save buttons + status line --- */
+.cp-actions {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.cp-actions button {
+  height: 46px;
+  padding: 0 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  font: 600 15px/1 'DM Sans', sans-serif;
+}
+
+.cp-primary {
+  border: 0;
+  background: var(--cp-primary);
+  color: #fff;
+}
+
+.cp-ghost {
+  border: 1px solid var(--cp-border);
+  background: #fff;
+  color: var(--cp-heading);
+}
+
+.cp-feedback {
+  margin: 12px 0 0;
+  text-align: right;
+  color: var(--cp-primary);
+  font: 400 13px/1.4 'DM Sans', sans-serif;
+}
+
+/* --- Breakpoints --- */
+@media (max-width: 640px) {
+  .cp-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Additions for the API-wired form */
+.cp-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--cp-border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--cp-heading);
+  background: #fff;
+  box-sizing: border-box;
+}
+.cp-input:focus {
+  outline: none;
+  border-color: var(--cp-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+.cp-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--cp-border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--cp-heading);
+  background: #fff;
+  box-sizing: border-box;
+  resize: vertical;
+}
+.cp-textarea:focus {
+  outline: none;
+  border-color: var(--cp-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Back link at top of card (edit mode only) */
+.cp-back {
+  background: none;
+  border: 0;
+  padding: 0 0 16px;
+  color: var(--cp-primary);
+  font: 500 14px/1 'DM Sans', sans-serif;
+  cursor: pointer;
+  display: inline-block;
+}
+.cp-back:hover {
+  text-decoration: underline;
+}

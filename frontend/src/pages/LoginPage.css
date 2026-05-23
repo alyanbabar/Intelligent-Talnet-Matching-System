@@ -1,0 +1,141 @@
+.login-page {
+  min-height: 100vh;
+  background: var(--login-bg);
+  font-family: 'DM Sans', sans-serif;
+  color: var(--login-body);
+}
+
+.login-nav {
+  border-bottom: 1px solid var(--login-border);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.login-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 24px;
+}
+
+.login-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--login-heading);
+}
+
+.login-brand-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--login-primary);
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.login-main {
+  display: flex;
+  justify-content: center;
+  padding: 56px 24px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--login-surface);
+  border: 1px solid var(--login-border);
+  border-radius: 14px;
+  padding: 32px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+}
+
+.login-card h1 {
+  font-family: 'Manrope', sans-serif;
+  color: var(--login-heading);
+  font-size: 24px;
+  margin: 0 0 6px;
+}
+
+.login-sub {
+  margin: 0 0 24px;
+  font-size: 14px;
+}
+
+.login-field {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.login-field span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--login-heading);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.login-field input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--login-border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--login-heading);
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.login-field input:focus {
+  outline: none;
+  border-color: var(--login-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.login-primary {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--login-primary);
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.login-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-feedback {
+  margin: 14px 0 0;
+  font-size: 13px;
+  min-height: 18px;
+}
+
+.login-signup-line {
+  text-align: center;
+  margin: 16px 0 0;
+  font-size: 14px;
+}
+
+.login-signup-line button {
+  background: none;
+  border: 0;
+  color: var(--login-primary);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+}

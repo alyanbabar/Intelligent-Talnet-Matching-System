@@ -1,0 +1,287 @@
+/*
+ * CandidateDashboardPage.css → CandidateDashboardPage.jsx
+ * Prefix: dash-
+ */
+
+.dash-page {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+  background: var(--dash-bg);
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* --- Sidebar --- */
+.dash-sidebar {
+  background: var(--dash-surface);
+  border-right: 1px solid var(--dash-border);
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dash-brand {
+  border: 0;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font: 700 17px/1 Manrope, sans-serif;
+  color: var(--dash-heading);
+  padding: 8px 8px 16px;
+  text-align: left;
+}
+
+.dash-brand-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: var(--dash-primary);
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+
+.dash-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.dash-nav-item {
+  border: 0;
+  background: transparent;
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font: 500 15px/1 'DM Sans', sans-serif;
+  color: var(--dash-body);
+}
+
+.dash-nav-item:hover {
+  background: rgba(37, 99, 235, 0.06);
+  color: var(--dash-heading);
+}
+
+.dash-nav-item.active {
+  background: rgba(37, 99, 235, 0.12);
+  color: var(--dash-primary);
+  font-weight: 600;
+}
+
+.dash-logout {
+  margin-top: auto;
+}
+
+/* --- Main column --- */
+.dash-main {
+  padding: 28px 32px 48px;
+  max-width: 960px;
+}
+
+/* --- Welcome + membership --- */
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.dash-header h1 {
+  margin: 0 0 6px;
+  font: 700 26px/1.2 Manrope, sans-serif;
+  color: var(--dash-heading);
+}
+
+.dash-header p {
+  margin: 0;
+  color: var(--dash-body);
+  font: 400 15px/1.5 'DM Sans', sans-serif;
+}
+
+.dash-membership {
+  background: var(--dash-surface);
+  border: 1px solid var(--dash-border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  min-width: 220px;
+}
+
+.dash-membership-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font: 500 14px/1 'DM Sans', sans-serif;
+  color: var(--dash-heading);
+  margin-bottom: 8px;
+}
+
+.dash-pill {
+  background: #F3F4F6;
+  color: #364153;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+.dash-upgrade {
+  width: 100%;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid var(--dash-border);
+  background: #fff;
+  cursor: pointer;
+  font: 600 14px/1 'DM Sans', sans-serif;
+  color: var(--dash-heading);
+}
+
+.dash-upgrade:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+/* --- Search --- */
+.dash-search-row {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+  margin-bottom: 28px;
+}
+
+.dash-search-row input {
+  flex: 1;
+  min-width: 0;
+  height: 44px;
+  border: 1px solid var(--dash-border);
+  border-radius: 10px;
+  padding: 0 14px;
+  font: 400 15px/1 'DM Sans', sans-serif;
+}
+
+.dash-search-row button {
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 10px;
+  border: 0;
+  background: var(--dash-primary);
+  color: #fff;
+  font: 600 15px/1 'DM Sans', sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* --- Job cards --- */
+.dash-section h2 {
+  margin: 0 0 16px;
+  font: 700 18px/1.3 Manrope, sans-serif;
+  color: var(--dash-heading);
+}
+
+.dash-job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dash-job-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  background: var(--dash-surface);
+  border: 1px solid var(--dash-border);
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+
+.dash-job-card h3 {
+  margin: 0 0 6px;
+  font: 700 17px/1.3 Manrope, sans-serif;
+  color: var(--dash-heading);
+}
+
+.dash-job-meta,
+.dash-job-salary {
+  margin: 0 0 4px;
+  font: 400 14px/1.5 'DM Sans', sans-serif;
+  color: var(--dash-body);
+}
+
+.dash-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.dash-tag {
+  background: #EFF6FF;
+  color: var(--dash-primary);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font: 500 12px/1 'DM Sans', sans-serif;
+}
+
+.dash-job-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.dash-match {
+  background: #DCFCE7;
+  color: #008236;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font: 600 13px/1 'DM Sans', sans-serif;
+}
+
+.dash-job-actions button {
+  height: 38px;
+  padding: 0 16px;
+  border-radius: 10px;
+  border: 1px solid var(--dash-border);
+  background: #fff;
+  cursor: pointer;
+  font: 600 14px/1 'DM Sans', sans-serif;
+  color: var(--dash-heading);
+}
+
+/* --- Inline feedback --- */
+.dash-feedback {
+  margin-top: 16px;
+  color: var(--dash-primary);
+  font: 400 14px/1.4 'DM Sans', sans-serif;
+}
+
+/* --- Breakpoints --- */
+@media (max-width: 900px) {
+  .dash-page {
+    grid-template-columns: 1fr;
+  }
+
+  .dash-sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    border-right: 0;
+    border-bottom: 1px solid var(--dash-border);
+  }
+
+  .dash-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+  }
+
+  .dash-logout {
+    margin-top: 0;
+  }
+}

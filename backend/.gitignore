@@ -1,0 +1,35 @@
+# Python backend
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local database files
+instance/
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment / secret files
+.env
+.env.*
+!.env.example
+
+# VS Code local settings
+.vscode/
+
+# Frontend
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
